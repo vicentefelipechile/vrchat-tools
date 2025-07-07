@@ -17,7 +17,6 @@
                     <option value="ja">日本語</option>
                     <option value="ko">한국어</option>
                     <option value="zh-CN">简体中文</option>
-                    <option value="pt">Português</option>
                 </select>
             </div>
             <img src="assets/logo.svg" alt="VRChat Tools Logo" id="logo">
@@ -30,7 +29,7 @@
             <h2 data-key="main.menuTitle">Available Tools</h2>
             <ul>
                 <li><a href="#image-converter" data-key="imageConverter.menuLink">16:9 Image Converter</a></li>
-                <li><a href="#watermark-section" data-key="watermark.title">Watermark Options (Optional)</a></li>
+                
                 <!-- More tools will be added here -->
             </ul>
         </nav>
@@ -63,6 +62,44 @@
                         </div>
                     </div>
 
+                    <details class="watermark-details">
+                        <summary data-key="watermark.title">Watermark Options (Optional)</summary>
+                        <div class="watermark-options content">
+                            <div class="input-section">
+                                <label for="watermarkImageInput" class="custom-file-upload" data-key="watermark.selectImage">Select Watermark Image</label>
+                                <input type="file" id="watermarkImageInput" accept="image/*">
+                                <span id="watermarkFileName" data-key="watermark.noFileSelected">No file selected</span>
+                            </div>
+                            <button type="button" id="removeWatermarkBtn" class="remove-btn" data-key="watermark.removeButton" style="display:none;">Remove Watermark</button>
+
+                            <div class="options-section">
+                                <h3 data-key="watermark.positionTitle">Position</h3>
+                                <div class="watermark-position-selector">
+                                    <button type="button" class="pos-btn top-left" data-position="top-left"></button>
+                                    <button type="button" class="pos-btn top-right" data-position="top-right"></button>
+                                    <button type="button" class="pos-btn bottom-left" data-position="bottom-left"></button>
+                                    <button type="button" class="pos-btn bottom-right" data-position="bottom-right"></button>
+                                </div>
+                            </div>
+
+                            <div class="options-section">
+                                <h3 data-key="watermark.transparencyTitle">Transparency</h3>
+                                <div class="radio-group">
+                                    <input type="radio" id="trans-opaque" name="watermark-transparency" value="opaque" checked>
+                                    <label for="trans-opaque" data-key="watermark.transOpaque">Opaque</label>
+
+                                    <input type="radio" id="trans-high" name="watermark-transparency" value="high" checked>
+                                    <label for="trans-high" data-key="watermark.transHigh">High</label>
+                                    
+                                    <input type="radio" id="trans-medium" name="watermark-transparency" value="medium">
+                                    <label for="trans-medium" data-key="watermark.transMedium">Medium</label>
+                                    
+                                    <input type="radio" id="trans-low" name="watermark-transparency" value="low">
+                                    <label for="trans-low" data-key="watermark.transLow">Low</label>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
                     <button id="convertBtn" data-key="common.convertButton">Convert</button>
                 </div>
 
@@ -77,51 +114,7 @@
                     </div>
                     <a id="downloadLink" class="download-btn" style="display:none;" data-key="common.downloadButton">Download Image</a>
                 </div>
-            </section>
-            
-            <!-- Watermark Section -->
-            <section id="watermark-section" class="tool-section">
-                <details>
-                    <summary data-key="watermark.title">Watermark Options (Optional)</summary>
-                    <div class="watermark-options content">
-                        <div class="input-section">
-                            <label for="watermarkImageInput" class="custom-file-upload" data-key="watermark.selectImage">Select Watermark Image</label>
-                            <input type="file" id="watermarkImageInput" accept="image/*">
-                            <span id="watermarkFileName" data-key="watermark.noFileSelected">No file selected</span>
-                        </div>
-
-                        <div class="options-section">
-                            <h3 data-key="watermark.positionTitle">Position</h3>
-                            <div class="radio-group">
-                                <input type="radio" id="pos-top-right" name="watermark-position" value="top-right" checked>
-                                <label for="pos-top-right" data-key="watermark.posTopRight">Top Right</label>
-                                
-                                <input type="radio" id="pos-top-left" name="watermark-position" value="top-left">
-                                <label for="pos-top-left" data-key="watermark.posTopLeft">Top Left</label>
-                                
-                                <input type="radio" id="pos-bottom-right" name="watermark-position" value="bottom-right">
-                                <label for="pos-bottom-right" data-key="watermark.posBottomRight">Bottom Right</label>
-                                
-                                <input type="radio" id="pos-bottom-left" name="watermark-position" value="bottom-left">
-                                <label for="pos-bottom-left" data-key="watermark.posBottomLeft">Bottom Left</label>
-                            </div>
-                        </div>
-
-                        <div class="options-section">
-                            <h3 data-key="watermark.transparencyTitle">Transparency</h3>
-                            <div class="radio-group">
-                                <input type="radio" id="trans-low" name="watermark-transparency" value="low" checked>
-                                <label for="trans-low" data-key="watermark.transLow">Low</label>
-                                
-                                <input type="radio" id="trans-medium" name="watermark-transparency" value="medium">
-                                <label for="trans-medium" data-key="watermark.transMedium">Medium</label>
-                                
-                                <input type="radio" id="trans-high" name="watermark-transparency" value="high">
-                                <label for="trans-high" data-key="watermark.transHigh">High</label>
-                            </div>
-                        </div>
-                    </div>
-                </details>
+                
             </section>
             
             <!-- More tool sections will be added here -->

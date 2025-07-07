@@ -12,9 +12,22 @@ const initImageConverter = () => {
 
     const watermarkImageInput = document.getElementById('watermarkImageInput');
     const watermarkFileNameSpan = document.getElementById('watermarkFileName');
+    const removeWatermarkBtn = document.getElementById('removeWatermarkBtn');
 
     let selectedFile = null;
     let watermarkFile = null;
+    let selectedWatermarkPosition = 'top-right'; // Default position
+
+    // Initialize watermark position buttons
+    document.querySelectorAll('.watermark-position-selector .pos-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.watermark-position-selector .pos-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            selectedWatermarkPosition = this.dataset.position;
+        });
+    });
+    // Set default active button
+    document.querySelector('.watermark-position-selector .pos-btn.top-right').classList.add('active');
 
     imageInput.addEventListener('change', (e) => {
         selectedFile = e.target.files[0];
@@ -34,9 +47,18 @@ const initImageConverter = () => {
         watermarkFile = e.target.files[0];
         if (watermarkFile) {
             watermarkFileNameSpan.textContent = watermarkFile.name;
+            removeWatermarkBtn.style.display = 'inline-block';
         } else {
             watermarkFileNameSpan.textContent = getTranslation('watermark.noFileSelected');
+            removeWatermarkBtn.style.display = 'none';
         }
+    });
+
+    removeWatermarkBtn.addEventListener('click', () => {
+        watermarkFile = null;
+        watermarkImageInput.value = ''; // Clear the file input
+        watermarkFileNameSpan.textContent = getTranslation('watermark.noFileSelected');
+        removeWatermarkBtn.style.display = 'none';
     });
 
     convertBtn.addEventListener('click', () => {
@@ -45,10 +67,9 @@ const initImageConverter = () => {
             return;
         }
         const optimization = document.querySelector('input[name="optimization"]:checked').value;
-        const watermarkPosition = document.querySelector('input[name="watermark-position"]:checked')?.value;
-        const watermarkTransparency = document.querySelector('input[name="watermark-transparency"]:checked')?.value;
+        const watermarkTransparency = document.querySelector('input[name="watermark-transparency"]:checked').value;
 
-        processImage(selectedFile, optimization, watermarkFile, watermarkPosition, watermarkTransparency);
+        processImage(selectedFile, optimization, watermarkFile, selectedWatermarkPosition, watermarkTransparency);
     });
 
     function processImage(file, optimization, watermarkFile = null, watermarkPosition = null, watermarkTransparency = null) {
@@ -91,9 +112,10 @@ const initImageConverter = () => {
                         watermarkImg.onload = () => {
                             let watermarkAlpha;
                             switch (watermarkTransparency) {
-                                case 'low': watermarkAlpha = 0.7; break;
+                                case 'low': watermarkAlpha = 0.3; break; // Mucha transparencia (menos visible)
                                 case 'medium': watermarkAlpha = 0.5; break;
-                                case 'high': watermarkAlpha = 0.3; break;
+                                case 'high': watermarkAlpha = 0.7; break; // Poca transparencia (más visible)
+                                case 'opaque': watermarkAlpha = 1.0; break; // Totalmente visible
                                 default: watermarkAlpha = 0.5; break;
                             }
                             ctx.globalAlpha = watermarkAlpha;

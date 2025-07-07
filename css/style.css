@@ -292,7 +292,7 @@ input[type="file"] {
 }
 
 /* Watermark Section Styles */
-#watermark-section details {
+.watermark-details {
     background-color: #2a2a2a;
     padding: 15px;
     border-radius: 8px;
@@ -300,7 +300,7 @@ input[type="file"] {
     text-align: left;
 }
 
-#watermark-section summary {
+.watermark-details summary {
     font-size: 1.2em;
     font-weight: bold;
     color: #1e90ff;
@@ -308,35 +308,100 @@ input[type="file"] {
     padding: 5px 0;
 }
 
-#watermark-section .watermark-options {
+.watermark-details .watermark-options {
     padding-top: 15px;
     border-top: 1px solid #333;
     margin-top: 15px;
 }
 
-#watermark-section .options-section h3 {
+.watermark-details .options-section h3 {
     font-size: 1em;
     color: #e0e0e0;
     margin-bottom: 10px;
     margin-top: 20px;
 }
 
-#watermark-section .radio-group {
+.watermark-details .radio-group {
     justify-content: flex-start;
 }
 
-#watermark-section .radio-group label {
+.watermark-details .radio-group label {
     padding: 6px 12px;
     font-size: 0.9em;
 }
 
-#watermark-section .input-section {
+.watermark-details .input-section {
     margin-bottom: 15px;
 }
 
-#watermark-section #watermarkFileName {
+.watermark-details #watermarkFileName {
     margin-left: 10px;
     font-size: 0.9em;
 }
 
+.watermark-position-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 120px; /* Adjust as needed */
+    height: 120px; /* Adjust as needed */
+    border: 2px solid #1e90ff;
+    margin: 20px auto;
+    position: relative;
+}
 
+.watermark-position-selector .pos-btn {
+    background-color: #333;
+    border: 1px solid #555;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.watermark-position-selector .pos-btn:hover {
+    background-color: #444;
+}
+
+.watermark-position-selector .pos-btn.active {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+}
+
+.watermark-position-selector .pos-btn.top-left {
+    top: 0;
+    left: 0;
+}
+
+.watermark-position-selector .pos-btn.top-right {
+    top: 0;
+    right: 0;
+}
+
+.watermark-position-selector .pos-btn.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.watermark-position-selector .pos-btn.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}

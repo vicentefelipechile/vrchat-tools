@@ -40,7 +40,9 @@ const translations = {
             'transparencyTitle': 'Transparency',
             'transLow': 'Low',
             'transMedium': 'Medium',
-            'transHigh': 'High'
+            'transHigh': 'High',
+            'transOpaque': 'Opaque',
+            'removeButton': 'Remove Watermark'
         }
     },
     'es': {
@@ -84,7 +86,9 @@ const translations = {
             'transparencyTitle': 'Transparencia',
             'transLow': 'Baja',
             'transMedium': 'Media',
-            'transHigh': 'Alta'
+            'transHigh': 'Alta',
+            'transOpaque': 'Opaca',
+            'removeButton': 'Eliminar Marca de Agua'
         }
     },
     'ja': {
@@ -128,7 +132,10 @@ const translations = {
             'transparencyTitle': '透明度',
             'transLow': '低',
             'transMedium': '中',
-            'transHigh': '高'
+            'transHigh': '高',
+            'transTotal': '完全',
+            'transOpaque': '不透明',
+            'removeButton': '透かしを削除'
         }
     },
     'ko': {
@@ -172,7 +179,10 @@ const translations = {
             'transparencyTitle': '투명도',
             'transLow': '낮음',
             'transMedium': '중간',
-            'transHigh': '높음'
+            'transHigh': '높음',
+            'transTotal': '전체',
+            'transOpaque': '불투명',
+            'removeButton': '워터마크 제거'
         }
     },
     'zh-CN': {
@@ -216,51 +226,10 @@ const translations = {
             'transparencyTitle': '透明度',
             'transLow': '低',
             'transMedium': '中',
-            'transHigh': '高'
-        }
-    },
-    'pt': {
-        'main': {
-            'pageTitle': 'Ferramentas VRChat',
-            'title': 'Ferramentas VRChat',
-            'description': 'Uma coleção de ferramentas para VRChat.',
-            'menuTitle': 'Ferramentas Disponíveis'
-        },
-        'common': {
-            'backButton': '← Voltar ao Menu',
-            'resultTitle': 'Resultado',
-            'downloadButton': 'Baixar Imagem',
-            'resolution': 'Resolução',
-            'size': 'Tamanho',
-            'convertButton': 'Converter',
-            'koFiButton': 'Me pague um café'
-        },
-        'imageConverter': {
-            'menuLink': 'Conversor de Imagens VRChat',
-            'title': 'Conversor de Imagens VRChat',
-            'description': 'Converta e otimize suas imagens para o formato VRChat.',
-            'selectButton': 'Selecionar Imagem',
-            'noFileSelected': 'Nenhum arquivo selecionado',
-            'optimizationTitle': 'Opções de Otimização',
-            'optNone': 'Nenhuma',
-            'optMedium': 'Média',
-            'optHigh': 'Alta',
-            'readyMessage': 'Imagem pronta para ser convertida.',
-            'errorMessage': 'Por favor, selecione uma imagem primeiro.'
-        },
-        'watermark': {
-            'title': 'Opções de Marca d'água (Opcional)',
-            'selectImage': 'Selecionar Imagem de Marca d'água',
-            'noFileSelected': 'Nenhum arquivo selecionado',
-            'positionTitle': 'Posição',
-            'posTopRight': 'Canto Superior Direito',
-            'posTopLeft': 'Canto Superior Esquerdo',
-            'posBottomRight': 'Canto Inferior Direito',
-            'posBottomLeft': 'Canto Inferior Esquerdo',
-            'transparencyTitle': 'Transparência',
-            'transLow': 'Baixa',
-            'transMedium': 'Média',
-            'transHigh': 'Alta'
+            'transHigh': '高',
+            'transTotal': '完全',
+            'transOpaque': '不透明',
+            'removeButton': '移除水印'
         }
     }
 };
