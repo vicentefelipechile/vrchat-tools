@@ -217,19 +217,31 @@ input[type="file"] {
     right: 15px;
 }
 
-#lang-switcher button {
+#lang-switcher select {
     background-color: #333;
     color: #ccc;
-    border: none;
+    border: 1px solid #555;
     padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
     border-radius: 5px;
+    cursor: pointer;
+    appearance: none; /* Remove default select arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23cccccc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.4H18.4c-5%200-9.3%201.8-12.9%205.4s-5.4%207.8-5.4%2012.8c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095.1c3.6-3.5%205.4-7.8%205.4-12.8%200-5-1.8-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px; /* Make space for the arrow */
 }
 
-#lang-switcher button.active {
-    background-color: #1e90ff;
-    color: #fff;
+#lang-switcher select:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+#lang-switcher option {
+    background-color: #333;
+    color: #ccc;
 }
 
 #main-header {
@@ -245,3 +257,86 @@ input[type="file"] {
     height: 80px; /* Adjust size as needed */
     margin-bottom: 10px;
 }
+
+.ko-fi-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FF5E5E; /* Ko-fi red */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* Space from description */
+    transition: background-color 0.3s ease;
+}
+
+.ko-fi-button:hover {
+    background-color: #e04a4a;
+}
+
+.ko-fi-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: none; /* Remove any default image border */
+    fill: currentColor; /* Make SVG inherit text color */
+}
+
+#koFiButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's above other content */
+    display: none; /* Hidden by default, controlled by JS */
+}
+
+/* Watermark Section Styles */
+#watermark-section details {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#watermark-section summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1e90ff;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+#watermark-section .watermark-options {
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    margin-top: 15px;
+}
+
+#watermark-section .options-section h3 {
+    font-size: 1em;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#watermark-section .radio-group {
+    justify-content: flex-start;
+}
+
+#watermark-section .radio-group label {
+    padding: 6px 12px;
+    font-size: 0.9em;
+}
+
+#watermark-section .input-section {
+    margin-bottom: 15px;
+}
+
+#watermark-section #watermarkFileName {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+
