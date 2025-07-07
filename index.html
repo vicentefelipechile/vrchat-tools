@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="main.pageTitle">VRChat Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="main-header">
+            <div id="lang-switcher">
+                <button data-lang="en" class="active">EN</button>
+                <button data-lang="es">ES</button>
+            </div>
+            <h1 data-key="main.title">VRChat Tools</h1>
+            <p data-key="main.description">A collection of tools for VRChat.</p>
+        </header>
+
+        <nav id="tool-menu">
+            <h2 data-key="main.menuTitle">Available Tools</h2>
+            <ul>
+                <li><a href="#image-converter" data-key="imageConverter.menuLink">16:9 Image Converter</a></li>
+                <!-- More tools will be added here -->
+            </ul>
+        </nav>
+
+        <main id="tools-container">
+            <!-- Tool 1: Image Converter -->
+            <section id="image-converter" class="tool-section">
+                <button class="back-to-menu" data-key="common.backButton">← Back to Menu</button>
+                <h1 data-key="imageConverter.title">16:9 Image Converter</h1>
+                <p data-key="imageConverter.description">Convert and optimize your images to a 16:9 aspect ratio.</p>
+                
+                <div class="tool">
+                    <div class="input-section">
+                        <label for="imageInput" class="custom-file-upload" data-key="imageConverter.selectButton">Select Image</label>
+                        <input type="file" id="imageInput" accept="image/*">
+                        <span id="fileName" data-key="imageConverter.noFileSelected">No file selected</span>
+                    </div>
+
+                    <div class="options-section">
+                        <h2 data-key="imageConverter.optimizationTitle">Optimization Options</h2>
+                        <div class="radio-group">
+                            <input type="radio" id="opt-none" name="optimization" value="none" checked>
+                            <label for="opt-none" data-key="imageConverter.optNone">None</label>
+                            
+                            <input type="radio" id="opt-medium" name="optimization" value="medium">
+                            <label for="opt-medium" data-key="imageConverter.optMedium">Medium</label>
+                            
+                            <input type="radio" id="opt-high" name="optimization" value="high">
+                            <label for="opt-high" data-key="imageConverter.optHigh">High</label>
+                        </div>
+                    </div>
+
+                    <button id="convertBtn" data-key="common.convertButton">Convert</button>
+                </div>
+
+                <div class="output-section">
+                    <h2 data-key="common.resultTitle">Result</h2>
+                    <div id="imagePreview" class="image-preview-container">
+                        <p data-key="imageConverter.readyMessage">Image ready to be converted.</p>
+                    </div>
+                    <div class="output-info">
+                        <span id="resolutionInfo"></span>
+                        <span id="sizeInfo"></span>
+                    </div>
+                    <a id="downloadLink" class="download-btn" style="display:none;" data-key="common.downloadButton">Download Image</a>
+                </div>
+            </section>
+            
+            <!-- More tool sections will be added here -->
+        </main>
+    </div>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
