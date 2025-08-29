@@ -370,23 +370,23 @@ input[type="file"] {
 }
 
 .watermark-position-selector .pos-btn.top-left {
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 8px;
 }
 
 .watermark-position-selector .pos-btn.top-right {
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 8px;
 }
 
 .watermark-position-selector .pos-btn.bottom-left {
-    bottom: 0;
-    left: 0;
+    bottom: 8px;
+    left: 8px;
 }
 
 .watermark-position-selector .pos-btn.bottom-right {
-    bottom: 0;
-    right: 0;
+    bottom: 8px;
+    right: 8px;
 }
 
 .remove-btn {
@@ -403,5 +403,121 @@ input[type="file"] {
 }
 
 .remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* URL Converter Output */
+.converted-url-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.url-text {
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 15px;
+}
+
+.copy-btn {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #0073e6;
+}
+
+/* URL Converter Input */
+.url-input-section {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.url-input-section label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-size: 1em;
+    box-sizing: border-box; /* To include padding and border in the width */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+/* History Section */
+.history-section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.history-section h3 {
+    color: #1e90ff;
+    margin-bottom: 15px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+}
+
+#history-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#history-list .history-item-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    cursor: pointer;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+#history-list .history-item-link:hover {
+    color: #1e90ff;
+}
+
+.delete-history-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-history-btn:hover {
     background-color: #c82333;
 }

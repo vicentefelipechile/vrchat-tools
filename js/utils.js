@@ -7,3 +7,13 @@ function formatBytes(bytes, decimals = 2) {
     const i = Math.floor(Math.log(actualBytes) / Math.log(k));
     return parseFloat((actualBytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Optional: Show a success message to the user
+        console.log('Copied to clipboard');
+    }).catch(err => {
+        // Optional: Show an error message to the user
+        console.error('Failed to copy: ', err);
+    });
+}

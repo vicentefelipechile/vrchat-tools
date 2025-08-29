@@ -35,3 +35,7 @@ const initTranslation = () => {
         });
     }
 };
+
+function updateTranslations() {
+    setLanguage(currentLang);
+}

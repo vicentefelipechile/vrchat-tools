@@ -29,7 +29,7 @@
             <h2 data-key="main.menuTitle">Available Tools</h2>
             <ul>
                 <li><a href="#image-converter" data-key="imageConverter.menuLink">16:9 Image Converter</a></li>
-                
+                <li><a href="#url-converter" data-key="urlConverter.menuLink">URL Converter</a></li>
                 <!-- More tools will be added here -->
             </ul>
         </nav>
@@ -116,8 +116,34 @@
                 </div>
                 
             </section>
-            
-            <!-- More tool sections will be added here -->
+
+            <!-- Tool 2: URL Converter -->
+            <section id="url-converter" class="tool-section">
+                <button class="back-to-menu" data-key="common.backButton">← Back to Menu</button>
+                <h1 data-key="urlConverter.title">URL Converter</h1>
+                <p data-key="urlConverter.description">Paste a YouTube URL to get a modified link.</p>
+                
+                <div class="tool">
+                    <div class="input-section url-input-section">
+                        <label for="youtubeUrlInput" data-key="urlConverter.inputLabel">YouTube URL</label>
+                        <input type="text" id="youtubeUrlInput" placeholder="https://www.youtube.com/watch?v=...">
+                    </div>
+                    <button id="convertUrlBtn" data-key="common.convertButton">Convert</button>
+                </div>
+
+                <div class="output-section">
+                    <h2 data-key="common.resultTitle">Result</h2>
+                    <div id="convertedUrlResult"></div>
+                    <div id="urlStatusResult" class="output-text">
+                        <p data-key="urlConverter.resultReady">Your converted URL will appear here.</p>
+                    </div>
+                </div>
+
+                <div id="history-section" class="history-section">
+                    <h3 data-key="urlConverter.historyTitle">Recent Videos</h3>
+                    <ul id="history-list"></ul>
+                </div>
+            </section>
         </main>
     </div>
     <a href="https://ko-fi.com/summertyt" target="_blank" class="ko-fi-button" id="koFiButton" data-key="common.koFiButton">
@@ -129,6 +155,7 @@
     <script src="js/translation.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/imageConverter.js"></script>
+    <script src="js/urlConverter.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

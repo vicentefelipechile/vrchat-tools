@@ -13,7 +13,8 @@ const translations = {
             'resolution': 'Resolution',
             'size': 'Size',
             'convertButton': 'Convert',
-            'koFiButton': 'Buy me a coffee'
+            'koFiButton': 'Buy me a coffee',
+            'copyButton': 'Copy'
         },
         'imageConverter': {
             'menuLink': 'VRChat Image Converter',
@@ -43,6 +44,16 @@ const translations = {
             'transHigh': 'High',
             'transOpaque': 'Opaque',
             'removeButton': 'Remove Watermark'
+        },
+        'urlConverter': {
+            'menuLink': 'URL Converter',
+            'title': 'URL Converter',
+            'description': 'Paste a YouTube URL to get a modified link.',
+            'inputLabel': 'YouTube URL',
+            'resultReady': 'Your converted URL will appear here.',
+            'checking': 'Checking URL...',
+            'processing': 'The video is currently being processed',
+            'historyTitle': 'Recent Videos'
         }
     },
     'es': {
@@ -59,7 +70,8 @@ const translations = {
             'resolution': 'Resolución',
             'size': 'Tamaño',
             'convertButton': 'Convertir',
-            'koFiButton': 'Invítame un café'
+            'koFiButton': 'Invítame un café',
+            'copyButton': 'Copiar'
         },
         'imageConverter': {
             'menuLink': 'Conversor de Imágenes para formato VRChat',
@@ -89,6 +101,16 @@ const translations = {
             'transHigh': 'Alta',
             'transOpaque': 'Opaca',
             'removeButton': 'Eliminar Marca de Agua'
+        },
+        'urlConverter': {
+            'menuLink': 'Conversor de URL',
+            'title': 'Conversor de URL',
+            'description': 'Pega una URL de YouTube para obtener un enlace modificado.',
+            'inputLabel': 'URL de YouTube',
+            'resultReady': 'Tu URL convertida aparecerá aquí.',
+            'checking': 'Comprobando URL...',
+            'processing': 'El video actualmente se esta procesando',
+            'historyTitle': 'Videos Recientes'
         }
     },
     'ja': {
@@ -105,7 +127,8 @@ const translations = {
             'resolution': '解像度',
             'size': 'サイズ',
             'convertButton': '変換',
-            'koFiButton': 'コーヒーを奢る'
+            'koFiButton': 'コーヒーを奢る',
+            'copyButton': 'コピー'
         },
         'imageConverter': {
             'menuLink': 'VRChat 画像変換ツール',
@@ -136,6 +159,16 @@ const translations = {
             'transTotal': '完全',
             'transOpaque': '不透明',
             'removeButton': '透かしを削除'
+        },
+        'urlConverter': {
+            'menuLink': 'URLコンバーター',
+            'title': 'URLコンバーター',
+            'description': 'YouTubeのURLを貼り付けて、変更されたリンクを取得します。',
+            'inputLabel': 'YouTube URL',
+            'resultReady': '変換されたURLはここに表示されます。',
+            'checking': 'URLを確認しています...',
+            'processing': 'ビデオは現在処理中です',
+            'historyTitle': '最近のビデオ'
         }
     },
     'ko': {
@@ -152,7 +185,8 @@ const translations = {
             'resolution': '해상도',
             'size': '크기',
             'convertButton': '변환',
-            'koFiButton': '커피 한 잔 사주기'
+            'koFiButton': '커피 한 잔 사주기',
+            'copyButton': '복사'
         },
         'imageConverter': {
             'menuLink': 'VRChat 이미지 변환기',
@@ -183,6 +217,16 @@ const translations = {
             'transTotal': '전체',
             'transOpaque': '불투명',
             'removeButton': '워터마크 제거'
+        },
+        'urlConverter': {
+            'menuLink': 'URL 변환기',
+            'title': 'URL 변환기',
+            'description': 'YouTube URL을 붙여넣어 수정된 링크를 받으세요.',
+            'inputLabel': '유튜브 URL',
+            'resultReady': '변환된 URL이 여기에 표시됩니다.',
+            'checking': 'URL 확인 중...',
+            'processing': '비디오가 현재 처리 중입니다',
+            'historyTitle': '최근 비디오'
         }
     },
     'zh-CN': {
@@ -199,7 +243,8 @@ const translations = {
             'resolution': '分辨率',
             'size': '大小',
             'convertButton': '转换',
-            'koFiButton': '给我买杯咖啡'
+            'koFiButton': '给我买杯咖啡',
+            'copyButton': '复制'
         },
         'imageConverter': {
             'menuLink': 'VRChat 图片转换器',
@@ -230,6 +275,16 @@ const translations = {
             'transTotal': '完全',
             'transOpaque': '不透明',
             'removeButton': '移除水印'
+        },
+        'urlConverter': {
+            'menuLink': 'URL 转换器',
+            'title': 'URL 转换器',
+            'description': '粘贴YouTube网址以获取修改后的链接。',
+            'inputLabel': 'YouTube网址',
+            'resultReady': '您转换后的URL将显示在此处。',
+            'checking': '正在检查URL...',
+            'processing': '视频当前正在处理中',
+            'historyTitle': '最近的视频'
         }
     }
 };
